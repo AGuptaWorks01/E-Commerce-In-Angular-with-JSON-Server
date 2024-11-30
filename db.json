@@ -1,0 +1,34 @@
+{
+  "seller": [
+    {
+      "name": "Anurag Gupta",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "id": 1
+    },
+    {
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "password": "abc@123",
+      "id": 3
+    },
+    {
+      "name": "Anurag",
+      "email": "ganurag624outlook@gmail.com",
+      "password": "123456",
+      "id": 4
+    },
+    {
+      "name": "Anurag",
+      "email": "anurag@gmail.com",
+      "password": "asfgfdgsd",
+      "id": 5
+    },
+    {
+      "name": "a",
+      "email": "a@gmail.com",
+      "password": "a",
+      "id": 6
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+.seller-auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 91vh;
+    background-color: #f4f4f4;
+}
+
+.signup {
+    background-color: #fff;
+    padding: 40px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px; /* Increased width */
+}
+.login {
+    background-color: #fff;
+    padding: 40px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px; /* Increased width */
+}
+
+.signup h1 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+}
+.login h1 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+}
+
+.comman-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    margin-bottom: 15px;
+    padding: 15px; /* Increased padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-input[type="button"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form-input[type="button"]:hover {
+    background-color: #0056b3;
+}
