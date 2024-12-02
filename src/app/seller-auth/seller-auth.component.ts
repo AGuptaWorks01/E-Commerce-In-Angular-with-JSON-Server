@@ -2,8 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SellerService } from '../services/seller.service';
-import { Router } from '@angular/router';
-import { SignUp } from '../data-type';
+import { Login, SignUp } from '../data-type';
 
 @Component({
   selector: 'app-seller-auth',
@@ -12,26 +11,26 @@ import { SignUp } from '../data-type';
   templateUrl: './seller-auth.component.html',
   styleUrl: './seller-auth.component.css',
 })
-export class SellerAuthComponent implements OnInit{
+export class SellerAuthComponent implements OnInit {
   showLogin = false;
-  constructor(private seller: SellerService, private router: Router) {}
+  constructor(private seller: SellerService) {}
 
   ngOnInit(): void {
     this.seller.reloadSeller();
   }
 
   openLogin() {
-    this.showLogin = true;
+    this.showLogin = false;
   }
   openSignup() {
-    this.showLogin = false;
+    this.showLogin = true;
   }
 
   signUp(data: SignUp): void {
     this.seller.userSignUp(data);
   }
 
-  login(data: SignUp): void {
+  login(data: Login): void {
     this.seller.userLogin(data);
   }
 }

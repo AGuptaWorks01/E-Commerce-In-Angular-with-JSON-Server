@@ -1,0 +1,106 @@
+/* Apply basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the product list container */
+.product-list {
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background */
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for the heading */
+.product-list h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Styling for the table */
+table {
+    width: 100%;
+    max-width: 800px; /* Set max width for the table */
+    border-collapse: collapse; /* Remove space between cells */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+}
+
+/* Table header styling */
+thead th {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Table body row styling */
+tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+    
+}
+
+/* Alternate row colors */
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fff;
+}
+
+/* Hover effect for rows */
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Table cell styling */
+td, th {
+    padding: 10px;
+    font-size: 0.9rem;
+    word-wrap: break-word;
+}
+
+/* Responsive table */
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 0.8rem;
+    }
+
+    thead {
+        display: none; /* Hide table headers on smaller screens */
+    }
+
+    tbody tr {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    tbody tr td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    tbody tr td:before {
+        content: attr(data-label); /* Add a label for each cell */
+        font-weight: bold;
+        text-transform: capitalize;
+        margin-right: 10px;
+        color: #333;
+    }
+}

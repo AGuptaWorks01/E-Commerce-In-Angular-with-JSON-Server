@@ -17,18 +17,24 @@
       "email": "ganurag624outlook@gmail.com",
       "password": "123456",
       "id": 4
+    }
+  ],
+  "products": [
+    {
+      "name": "Samsung M14",
+      "price": "199999",
+      "category": "Mobile",
+      "color": "Sky Blue",
+      "description": "It doesn’t get better than having benefits with so much more.",
+      "id": 1
     },
     {
-      "name": "Anurag",
-      "email": "anurag@gmail.com",
-      "password": "asfgfdgsd",
-      "id": 5
-    },
-    {
-      "name": "a",
-      "email": "a@gmail.com",
-      "password": "a",
-      "id": 6
+      "name": "Samsung M14",
+      "price": "199999",
+      "category": "Mobile",
+      "color": "Sky Blue",
+      "description": "asfrdfsa",
+      "id": 2
     }
   ]
 }

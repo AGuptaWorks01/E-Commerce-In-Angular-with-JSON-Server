@@ -30,8 +30,8 @@ export class AuthGuard implements CanActivate {
       const seller = localStorage.getItem('seller');
       if (seller) {
         return true;
-      }}
-      return this.sellerService.isSellerLoggedIn || false;
-    
+      }
+    }
+    return this.sellerService.isSellerLoggedIn || false;
   }
 }
