@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
             this.sallerName = sellerData.name
           }
         } else {
-          console.log('outside');
+          // console.log('outside');
           this.menuType = 'default';
         }
       }

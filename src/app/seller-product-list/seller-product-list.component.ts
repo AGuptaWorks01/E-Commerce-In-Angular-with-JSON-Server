@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from '../services/product.service';
 import { Product } from '../data-type';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-seller-product-list',
@@ -13,19 +14,20 @@ import { Product } from '../data-type';
 })
 export class SellerProductListComponent implements OnInit {
   addProductMessage: string | undefined;
-  constructor(private product: ProductService) {}
+  constructor(private product: ProductService, private router: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   submit(data: Product) {
     this.product.addProduct(data).subscribe((result) => {
-      console.log(result);
+      // console.log(result);
       if (result) {
         this.addProductMessage = 'Product is Succedfully addedd';
       }
       setTimeout(() => {
         this.addProductMessage = undefined;
-      }, 2000);
+        this.router.navigateByUrl('seller-home')
+      }, 1000);
     });
   }
 }

@@ -1,27 +1,39 @@
 <div class="product-list">
-    <h1>All Product List</h1>
+  <h1>All Product List</h1>
+  <!-- <p class='message-p'>{{productMessage}}</p> -->
+  <small class='message-p' *ngIf="isActionCompleted">{{ productMessage }}</small>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Color</th>
-                <th>Category</th>
-                <th>Description</th>
-            </tr>
-        </thead>
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Color</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
 
-        <tbody>
-            <tr *ngFor="let item of productList">
-                <td><img src="{{ item.image }}" /></td>
-                <td>{{item.name}}</td>
-                <td>{{item.price}}</td>
-                <td>{{item.color}}</td>
-                <td>{{item.category}}</td>
-                <td>{{item.description}}</td>
-            </tr>
-        </tbody>
-    </table>
+    <tbody>
+      <tr *ngFor="let item of productList">
+        <td><img src="{{ item.image }}" /></td>
+        <td>{{item.name}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.color}}</td>
+        <td>{{item.category}}</td>
+        <td>{{item.description}}</td>
+        <td> <i class="fas fa-trash-alt" (click)="deleteproduct(item.id)"
+            style="cursor: pointer; color: red; font-size: 18px;" title="Delete Product"></i>
+          &nbsp;
+          <a routerLink="/seller-update-product/{{item.id}}">
+            <i class="fas fa-edit" style="cursor: pointer; color: green; font-size: 18px;" title="Edit Product">
+            </i>
+          </a>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

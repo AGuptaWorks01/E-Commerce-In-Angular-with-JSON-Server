@@ -10,31 +10,60 @@
       "name": "John Doe",
       "email": "johndoe@example.com",
       "password": "abc@123",
-      "id": 3
+      "id": 2
     },
     {
-      "name": "Anurag",
-      "email": "ganurag624outlook@gmail.com",
-      "password": "123456",
-      "id": 4
+      "name": "g1",
+      "email": "g1@gmail.com",
+      "password": "admin",
+      "id": 3
     }
   ],
   "products": [
     {
-      "name": "Samsung M14",
-      "price": "199999",
-      "category": "Mobile",
-      "color": "Sky Blue",
-      "description": "It doesn’t get better than having benefits with so much more.",
+      "name": "Description The confirm() method displa",
+      "price": "1000",
+      "category": "Code",
+      "color": "Red Blue",
+      "description": "The confirm() method displays a dialog box with a message, an OK button, and a Cancel button.",
+      "image": "https://tpc.googlesyndication.com/simgad/5106372624792684629",
       "id": 1
     },
     {
-      "name": "Samsung M14",
-      "price": "199999",
-      "category": "Mobile",
-      "color": "Sky Blue",
-      "description": "asfrdfsa",
-      "id": 2
+      "name": "Dev",
+      "price": "AAAA",
+      "category": "9999",
+      "color": "333333",
+      "description": "The confirm() method returns true if the user clicked \"OK\", otherwise false.",
+      "image": "https://www.pixelstalk.net/wp-content/uploads/2016/10/Image-of-Binary-Code-1.jpg",
+      "id": 4
+    },
+    {
+      "name": "Dev",
+      "price": "AAAA",
+      "category": "1000",
+      "color": "333333",
+      "description": "asdfsdfd",
+      "image": "https://www.pixelstalk.net/wp-content/uploads/2016/10/Image-of-Binary-Code-1.jpg",
+      "id": 5
+    },
+    {
+      "name": "Dev",
+      "price": "AAAA",
+      "category": "1000",
+      "color": "333333",
+      "description": "asdfsdfd",
+      "image": "https://www.pixelstalk.net/wp-content/uploads/2016/10/Image-of-Binary-Code-1.jpg",
+      "id": 6
+    },
+    {
+      "name": "Dev",
+      "price": "AAAA",
+      "category": "1000",
+      "color": "333333",
+      "description": "sadfsadfd",
+      "image": "https://www.pixelstalk.net/wp-content/uploads/2016/10/Image-of-Binary-Code-1.jpg",
+      "id": 7
     }
   ]
 }

@@ -24,7 +24,7 @@ export class SellerService {
         if (result && isPlatformBrowser(this.platformId)) {
           localStorage.setItem('seller', JSON.stringify(result.body));
           this.router.navigate(['seller-home']);
-          this.router.navigate(['seller-home']);
+          // this.router.navigate(['seller-home']);
         }
       });
   }

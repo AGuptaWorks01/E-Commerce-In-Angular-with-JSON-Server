@@ -5,73 +5,21 @@
     box-sizing: border-box;
 }
 
-/* Styling for the product list container */
-.product-list {
-    padding: 20px;
-    background-color: #f4f4f4; /* Light background */
-    min-height: 100vh; /* Full viewport height */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.product-list{ max-width: 800px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: #f9f9f9; text-align: center; } 
+
+.product-list h1 { font-size: 24px; color: #333; margin-bottom: 20px; } 
+.product-list table { width: 100%; border-collapse: collapse; } 
+.product-list th,.product-list td { border: 1px solid #ccc; padding: 10px; text-align: left; } 
+.product-list th { background-color: #f2f2f2; } 
+.product-list img { max-width: 100px; height: auto; border-radius: 5px; }
+
+.message-p {
+  font-size: 1rem;
+  color: #e90c0c; /* Green color for success messages */
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
-/* Styling for the heading */
-.product-list h1 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-}
-
-/* Styling for the table */
-table {
-    width: 100%;
-    max-width: 800px; /* Set max width for the table */
-    border-collapse: collapse; /* Remove space between cells */
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    font-family: 'Arial', sans-serif;
-    text-align: left;
-}
-
-/* Table header styling */
-thead th {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px;
-    font-size: 1rem;
-    text-align: center;
-}
-
-/* Table body row styling */
-tbody tr {
-    border-bottom: 1px solid #ddd;
-    transition: background-color 0.3s ease;
-    
-}
-
-/* Alternate row colors */
-tbody tr:nth-child(odd) {
-    background-color: #f9f9f9;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #fff;
-}
-
-/* Hover effect for rows */
-tbody tr:hover {
-    background-color: #f1f1f1;
-}
-
-/* Table cell styling */
-td, th {
-    padding: 10px;
-    font-size: 0.9rem;
-    word-wrap: break-word;
-}
 
 /* Responsive table */
 @media screen and (max-width: 768px) {
