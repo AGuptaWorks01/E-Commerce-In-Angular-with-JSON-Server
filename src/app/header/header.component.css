@@ -17,7 +17,7 @@
     align-items: center;
     padding: 10px 20px;
     background-color: #0077b6; /* Primary color */
-    color: white;
+    color: rgb(15, 14, 14);
   }
 
   .nav h1 {
@@ -59,14 +59,11 @@
 
   .nav ul li a {
     text-decoration: none;
-    color: white;
+    color: rgb(34, 31, 31);
     font-size: 1rem;
     transition: color 0.3s ease;
   }
 
-  .nav ul li a:hover {
-    color: #00b4d8;
-  }
 
   h1 a{color: #f3f4f5;}
 
@@ -88,3 +85,28 @@
       width: 150px;
     }
   }
+
+
+
+
+
+  .suggested-result{
+    position: absolute;
+    display: list-item !important;
+    z-index: 10;
+    background-color: #f2f2f2;
+    width: 250px;
+    top: 40px;
+  color: black;
+  border: 1px solid rgb(193, 200, 211);
+}
+
+.suggested-result li{
+border: 1px solid #adc3d1;
+padding: 5px;
+}
+
+.suggested-result li a{
+cursor: pointer;
+color:blueviolet;
+}

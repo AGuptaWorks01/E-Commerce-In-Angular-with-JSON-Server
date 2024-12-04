@@ -1,0 +1,179 @@
+/* Carousel container styling */
+ngb-carousel {
+  max-width: 900px;  /* Reduce the overall width of the carousel */
+  margin: 0px auto;  /* Center the carousel with top margin */
+  position: relative;
+  padding-top: 20px; /* Optional: additional space above the carousel */
+}
+
+/* Image styling within the carousel */
+.picsum-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.picsum-img-wrapper img {
+  width: 100%;  /* Keep the image responsive */
+  height: 500px;  /* Set a fixed height for the image to decrease its size */
+  object-fit: cover;  /* Maintain aspect ratio while covering the area */
+  border-radius: 10px;
+  transition: transform 0.5s ease;  /* Smooth transition for hover effect */
+}
+
+/* Hover effect on images */
+.picsum-img-wrapper:hover img {
+  transform: scale(1.05);  /* Slight zoom effect */
+}
+
+/* Carousel caption styling */
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.carousel-caption h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.carousel-caption p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Optional: Styling for carousel controls (next/previous buttons) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;  /* Change control icon background */
+  border-radius: 50%;
+}
+
+/* Optional: Styling for indicators (dots) */
+.carousel-indicators li {
+  background-color: #007bff;  /* Blue dots */
+}
+
+.carousel-indicators .active {
+  background-color: #0056b3;  /* Darker blue for active dot */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container for the product list */
+.product-list-wrapper {
+  padding: 30px 15px;
+  text-align: center; /* Center the title and other elements */
+}
+
+/* Heading styling */
+.product-list-wrapper h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Row for the products */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjusts items in the row */
+  gap: 20px; /* Adds space between items */
+}
+
+/* Product card */
+.product-item {
+  background-color: #fff; /* White background for the product card */
+  border-radius: 8px; /* Rounded corners for the card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow around the card */
+  overflow: hidden; /* Ensures content doesn’t overflow from the rounded corners */
+  width: 100%; /* Make each product item full width */
+  max-width: 280px; /* Set max-width for larger screens */
+  margin: 0 auto; /* Center product items */
+  transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Product Image Styling */
+.product-item img {
+  width: 100%; /* Make image fill the card */
+  height: 200px; /* Fixed height for the image */
+  object-fit: cover; /* Ensures the image covers the space without distortion */
+  border-bottom: 2px solid #f0f0f0; /* Add a border between image and text */
+  transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Product Details Section */
+.product-details {
+  padding: 15px;
+  text-align: center; /* Center the text */
+}
+
+.product-details h5 {
+  font-size: 1.25rem; /* Product name size */
+  margin-bottom: 10px;
+  font-weight: bold; /* Bold product name */
+}
+
+/* Product Price */
+.product-price h6 {
+  font-size: 1rem;
+  color: #333; /* Dark color for the text */
+  margin-bottom: 5px;
+}
+
+/* Product Footer */
+.product-footer {
+  padding: 15px;
+  background-color: #f9f9f9; /* Light gray background for footer */
+  display: flex;
+  justify-content: space-around; /* Distribute buttons equally */
+  border-top: 2px solid #f0f0f0; /* Border on top of footer */
+  border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+}
+
+.product-footer a {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none; /* Remove underline */
+  font-size: 0.9rem;
+  transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+.product-footer a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Hover effect for the product card */
+.product-item:hover {
+  transform: translateY(-10px); /* Slight lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Make product cards responsive */
+@media (max-width: 767px) {
+  .product-item {
+    max-width: 100%; /* Make product items take full width on smaller screens */
+  }
+}
+
+/* For larger screens (like tablets and desktop) */
+@media (min-width: 768px) {
+  .col-sm-3 {
+    flex: 1 1 23%; /* Each product will take approximately 23% of the row */
+    max-width: 23%; /* Make product cards fit 4 in a row */
+  }
+}
