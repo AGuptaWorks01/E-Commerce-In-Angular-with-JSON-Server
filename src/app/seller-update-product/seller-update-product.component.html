@@ -1,6 +1,6 @@
 <div class="add-product">
   <h1>Update Product</h1>
-  <p class='message-p'>{{productMessage}}</p>
+  <p class="message-p">{{ productMessage }}</p>
 
   <form
     #addProduct="ngForm"
@@ -9,35 +9,35 @@
   >
     <input
       class="form-input"
-      ngModel="{{productData?.name}}"
+      ngModel="{{ productData?.name }}"
       name="name"
       type="text"
       placeholder="Enter Product Name"
     />
     <input
       class="form-input"
-      ngModel="{{productData?.price}}"
+      ngModel="{{ productData?.price }}"
       name="price"
       type="text"
       placeholder="Enter Product Price"
     />
     <input
       class="form-input"
-      ngModel="{{productData?.category}}"
+      ngModel="{{ productData?.category }}"
       name="category"
       type="text"
       placeholder="Enter Product Category"
     />
     <input
       class="form-input"
-      ngModel="{{productData?.color}}"
+      ngModel="{{ productData?.color }}"
       name="color"
       type="text"
       placeholder="Enter Product Color"
     />
     <textarea
       class="form-input"
-      ngModel="{{productData?.description}}"
+      ngModel="{{ productData?.description }}"
       name="description"
       type="text"
       placeholder="Enter product description"
@@ -45,7 +45,7 @@
 
     <input
       class="form-input"
-      ngModel="{{productData?.image}}"
+      ngModel="{{ productData?.image }}"
       type="text"
       name="image"
       placeholder="Enter Profuct Link"

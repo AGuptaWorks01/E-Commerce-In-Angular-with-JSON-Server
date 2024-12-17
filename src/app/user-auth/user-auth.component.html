@@ -1,0 +1,73 @@
+<div class="user-auth">
+  <div *ngIf="!showLogin" class="user-signup">
+    <h1>User Sign-Up</h1>
+    <form
+      #userSignUp="ngForm"
+      class="comman-form"
+      (ngSubmit)="signUp(userSignUp.value)"
+    >
+      <input
+        type="text"
+        class="form-input"
+        name="name"
+        ngModel
+        placeholder="Enter username"
+      />
+      <input
+        type="text"
+        class="form-input"
+        name="email"
+        ngModel
+        placeholder="Enter Email"
+      />
+      <input
+        type="password"
+        class="form-input"
+        name="passwrod"
+        ngModel
+        placeholder="Enter Password"
+      />
+
+      <button type="submit">Sign-Up</button>
+      <p>Already Have Account ? <a (click)="openLogin()">Click Here</a></p>
+    </form>
+  </div>
+
+  <div *ngIf="showLogin" class="user-login">
+    <h1>User Login</h1>
+    <form
+      #userLogin="ngForm"
+      class="comman-form"
+      (ngSubmit)="login(userLogin.value)"
+    >
+      <input
+        type="text"
+        class="form-input"
+        name="email"
+        placeholder="Enter Email"
+        #email="ngModel"
+        required
+        ngModel
+      />
+      <p><small *ngIf="email.invalid && email.touched">Enter Email</small></p>
+      <input
+        type="password"
+        class="form-input"
+        name="password"
+        ngModel
+        placeholder="Enter Password"
+        #password="ngModel"
+        required
+        ngModel
+      />
+      <p>
+        <small *ngIf="password.invalid && password.touched"
+          >Enter Password</small
+        >
+      </p>
+
+      <button type="submit">Login</button>
+      <p>Don't Have Account ? <a (click)="openSignUp()">Click Here</a></p> git st
+    </form>
+  </div>
+</div>

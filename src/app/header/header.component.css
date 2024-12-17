@@ -18,6 +18,9 @@
     padding: 10px 20px;
     background-color: #0077b6; /* Primary color */
     color: rgb(15, 14, 14);
+
+
+    /* position: fixed; top: 0; */
   }
 
   .nav h1 {
@@ -62,6 +65,7 @@
     color: rgb(34, 31, 31);
     font-size: 1rem;
     transition: color 0.3s ease;
+    cursor: pointer;
   }
 
 

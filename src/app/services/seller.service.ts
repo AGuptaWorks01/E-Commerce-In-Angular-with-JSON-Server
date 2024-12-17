@@ -24,7 +24,6 @@ export class SellerService {
         if (result && isPlatformBrowser(this.platformId)) {
           localStorage.setItem('seller', JSON.stringify(result.body));
           this.router.navigate(['seller-home']);
-          // this.router.navigate(['seller-home']);
         }
       });
   }
@@ -42,7 +41,7 @@ export class SellerService {
           localStorage.setItem('seller', JSON.stringify(result.body));
           this.router.navigate(['seller-home']);
         } else {
-          // console.log('login failed');
+          console.log('login failed');
         }
       });
   }

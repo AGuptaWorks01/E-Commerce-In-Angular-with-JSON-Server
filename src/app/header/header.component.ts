@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { ProductService } from '../services/product.service';
@@ -14,6 +14,7 @@ import { Product } from '../data-type';
 export class HeaderComponent implements OnInit {
   menuType: string = 'default';
   sallerName: string = '';
+  userName: string = '';
   searchResult: undefined | Product[];
 
   constructor(private router: Router, private product: ProductService) { }
@@ -32,17 +33,27 @@ export class HeaderComponent implements OnInit {
             let sellerData = sellerStore && JSON.parse(sellerStore)[0]
             this.sallerName = sellerData.name
           }
-        } else {
-          // console.log('outside');
+        } else if (localStorage.getItem('user')) {
+          let userStore = localStorage.getItem('user')
+          let userData = userStore && JSON.parse(userStore)
+          this.userName = userData.name
+          this.menuType = 'user';
+        }
+        else {
           this.menuType = 'default';
         }
       }
     });
   }
 
-  logout() {
+  sellerlogout() {
     localStorage.removeItem('seller');
     this.router.navigateByUrl('/');
+  }
+
+  userLogout() {
+    localStorage.removeItem('user')
+    this.router.navigateByUrl('/user-auth')
   }
 
   searchProduct(query: KeyboardEvent) {
@@ -50,7 +61,7 @@ export class HeaderComponent implements OnInit {
       const element = query.target as HTMLInputElement;
       this.product.searchProducts(element.value).subscribe((result) => {
         // console.log(this.product);
-        if(result.length > 5){
+        if (result.length > 5) {
           result.length = 5
         }
         this.searchResult = result;
@@ -58,11 +69,15 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  hideSearch(){
+  hideSearch() {
     this.searchResult = undefined;
   }
 
-  submitSearch(val:string){
+  redirectToDetails(id: number) {
+    this.router.navigateByUrl('/details/' + id);
+  }
+
+  submitSearch(val: string) {
     console.log(val);
     this.router.navigateByUrl(`search/${val}`)
   }

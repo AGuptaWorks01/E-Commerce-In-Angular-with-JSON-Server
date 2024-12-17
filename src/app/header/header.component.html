@@ -12,7 +12,7 @@
 
     <ul class="suggested-result" *ngIf="searchResult">
       <li *ngFor="let item of searchResult">
-        <a> {{ item.name }} </a>
+        <a (mousedown)="redirectToDetails(item.id)">{{ item.name }} </a>
       </li>
     </ul>
   </div>
@@ -21,7 +21,16 @@
     <ul *ngSwitchCase="'default'">
       <li><a routerLink="">Home</a></li>
       <li><a routerLink="seller-auth">Seller</a></li>
-      <li><a routerLink="#">Login</a></li>
+      <li><a routerLink="user-auth">Login/Sign-Up</a></li>
+      <li><a routerLink="#">Cart(0)</a></li>
+    </ul>
+
+    <ul *ngSwitchCase="'user'">
+      <li><a routerLink="">Home</a></li>
+      <li>
+        <a routerLink="user-auth">{{ userName | titlecase }}</a>
+      </li>
+      <li><a (click)="userLogout()">Logout</a></li>
       <li><a routerLink="#">Cart(0)</a></li>
     </ul>
 
@@ -29,7 +38,7 @@
       <li><a routerLink="seller-add-product">Add Product</a></li>
       <li><a routerLink="seller-home">List</a></li>
 
-      <li><a (click)="logout()" routerLink="/">Logout</a></li>
+      <li><a (click)="sellerlogout()" routerLink="/">Logout</a></li>
       <li>
         <a>{{ sallerName | titlecase }}</a>
       </li>
