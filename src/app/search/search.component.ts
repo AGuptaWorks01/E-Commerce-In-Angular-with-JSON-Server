@@ -17,7 +17,7 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     let query = this.activeRoute.snapshot.paramMap.get('query')
-    console.warn(query)
+    // console.warn(query)
     query && this.product.searchProducts(query).subscribe((result) => {
       this.searchResult = result
     })

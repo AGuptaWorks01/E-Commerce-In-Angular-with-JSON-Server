@@ -28,7 +28,7 @@ export class SellerUpdateProductComponent implements OnInit {
   }
 
   submit(data: Product) {
-    console.warn(data)
+    // console.warn(data)
     if (this.productData) {
       data.id = this.productData.id
     }

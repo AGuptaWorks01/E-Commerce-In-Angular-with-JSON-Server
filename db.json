@@ -101,58 +101,34 @@
       "id": 1
     },
     {
-      "name": "a",
-      "email": "a@gmail.com",
-      "passwrod": "a1",
+      "name": "Anurag",
+      "email": "anurag",
+      "passwrod": "",
       "id": 2
     },
     {
-      "name": "a1",
-      "email": "a1@gmail.com",
-      "passwrod": "a1",
+      "name": "Anurag",
+      "email": "anurag.g@cnergee.com",
+      "passwrod": "anurag",
       "id": 3
     },
     {
-      "name": "a1",
+      "name": "Anurag",
       "email": "a1@gmail.com",
-      "passwrod": "a1",
+      "password": "anurag",
       "id": 4
     },
     {
-      "name": "Anurag",
-      "email": "asdfs",
-      "passwrod": "sfsdfg",
+      "name": "sdfasf",
+      "email": "sdfsdfasdfd",
+      "password": "fdsfasfsd",
       "id": 5
     },
     {
-      "name": "Dev",
-      "email": "asdfsadf",
-      "passwrod": "asfasf",
+      "name": "Application",
+      "email": "app@gmail.com",
+      "password": "app",
       "id": 6
-    },
-    {
-      "name": "Anurag Gupta",
-      "email": "a1@gmail.com",
-      "passwrod": "asfsdfg",
-      "id": 7
-    },
-    {
-      "name": "Anurag",
-      "email": "asfasdf",
-      "passwrod": "asfsad",
-      "id": 8
-    },
-    {
-      "name": "Anurag",
-      "email": "a1@gmail.com",
-      "passwrod": "rutyu",
-      "id": 9
-    },
-    {
-      "name": "abc",
-      "email": "abc@gmail.com",
-      "passwrod": "abc123",
-      "id": 10
     }
   ]
 }

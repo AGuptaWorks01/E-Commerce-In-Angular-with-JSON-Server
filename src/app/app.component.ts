@@ -15,12 +15,11 @@ import { FooterComponent } from "./footer/footer.component";
     CommonModule,
     FormsModule,
     FooterComponent
-],
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'ECOMM-PROJECT';
-
+  title = 'ECOMM-PROJECT-JSON';
 
 }

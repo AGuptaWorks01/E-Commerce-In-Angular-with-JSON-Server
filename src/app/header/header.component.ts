@@ -16,35 +16,47 @@ export class HeaderComponent implements OnInit {
   sallerName: string = '';
   userName: string = '';
   searchResult: undefined | Product[];
+  cartItems = 0;
 
   constructor(private router: Router, private product: ProductService) { }
 
   ngOnInit(): void {
     this.router.events.subscribe((val: any) => {
       if (val.url) {
-        if (
-          typeof localStorage !== 'undefined' &&
-          localStorage.getItem('seller') &&
-          val.url.includes('seller')
-        ) {
-          this.menuType = 'seller';
-          if (localStorage.getItem('seller')) {
-            let sellerStore = localStorage.getItem('seller')
-            let sellerData = sellerStore && JSON.parse(sellerStore)[0]
-            this.sallerName = sellerData.name
+        if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+          if (
+            typeof localStorage !== 'undefined' &&
+            localStorage.getItem('seller') &&
+            val.url.includes('seller')
+          ) {
+            this.menuType = 'seller';
+            if (localStorage.getItem('seller')) {
+              let sellerStore = localStorage.getItem('seller')
+              let sellerData = sellerStore && JSON.parse(sellerStore)[0]
+              this.sallerName = sellerData.name
+            }
+          } else if (localStorage.getItem('user')) {
+            let userStore = localStorage.getItem('user')
+            let userData = userStore && JSON.parse(userStore)
+            this.userName = userData.name
+            this.menuType = 'user';
           }
-        } else if (localStorage.getItem('user')) {
-          let userStore = localStorage.getItem('user')
-          let userData = userStore && JSON.parse(userStore)
-          this.userName = userData.name
-          this.menuType = 'user';
-        }
-        else {
-          this.menuType = 'default';
+          else {
+            this.menuType = 'default';
+          }
         }
       }
-    });
+    })
+
+    let cartData = localStorage.getItem('localCart')
+    if (cartData) {
+      this.cartItems = JSON.parse(cartData).length
+    }
+    this.product.cartData.subscribe((items)=>{
+      this.cartItems = items.length
+    })
   }
+
 
   sellerlogout() {
     localStorage.removeItem('seller');
@@ -78,7 +90,7 @@ export class HeaderComponent implements OnInit {
   }
 
   submitSearch(val: string) {
-    console.log(val);
+    // console.log(val);
     this.router.navigateByUrl(`search/${val}`)
   }
 }

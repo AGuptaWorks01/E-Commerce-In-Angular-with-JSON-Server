@@ -10,12 +10,13 @@ export interface Login {
 }
 
 export interface Product {
-length: any;
+  length: any;
   name: string;
   price: number;
   category: string;
   color: string;
   description: string;
   image: string;
-  id:number;
+  id: number;
+  quantity:undefined | number
 }

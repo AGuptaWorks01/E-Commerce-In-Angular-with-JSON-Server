@@ -23,9 +23,9 @@
       <input
         type="password"
         class="form-input"
-        name="passwrod"
+        name="password"
         ngModel
-        placeholder="Enter Password"
+        placeholder="Enter password"
       />
 
       <button type="submit">Sign-Up</button>
@@ -34,7 +34,8 @@
   </div>
 
   <div *ngIf="showLogin" class="user-login">
-    <h1>User Login</h1>
+    <h1 >User Login</h1>
+    <p class="error-p">{{ authError }}</p>
     <form
       #userLogin="ngForm"
       class="comman-form"
@@ -48,26 +49,28 @@
         #email="ngModel"
         required
         ngModel
+        email
       />
-      <p><small *ngIf="email.invalid && email.touched">Enter Email</small></p>
+      <p class="invalid-input">
+        <span *ngIf="email.invalid && email.touched">Enter Email</span>
+      </p>
       <input
         type="password"
         class="form-input"
         name="password"
-        ngModel
         placeholder="Enter Password"
+        ngModel
         #password="ngModel"
         required
-        ngModel
+        minlength="2"
+        maxlength="20"
       />
       <p>
-        <small *ngIf="password.invalid && password.touched"
-          >Enter Password</small
-        >
+        <span *ngIf="password.invalid && password.touched">Enter Password</span>
       </p>
 
-      <button type="submit">Login</button>
-      <p>Don't Have Account ? <a (click)="openSignUp()">Click Here</a></p> git st
+      <button [disabled]="userLogin.invalid" type="submit">Login</button>
+      <p>Don't Have Account ? <a (click)="openSignUp()">Click Here</a></p>
     </form>
   </div>
 </div>

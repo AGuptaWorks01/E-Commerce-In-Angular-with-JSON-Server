@@ -22,7 +22,9 @@
       <li><a routerLink="">Home</a></li>
       <li><a routerLink="seller-auth">Seller</a></li>
       <li><a routerLink="user-auth">Login/Sign-Up</a></li>
-      <li><a routerLink="#">Cart(0)</a></li>
+      <li>
+        <a routerLink="#">Cart{{ cartItems }}</a>
+      </li>
     </ul>
 
     <ul *ngSwitchCase="'user'">
