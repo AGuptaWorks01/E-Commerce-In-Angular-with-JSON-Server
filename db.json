@@ -22,7 +22,7 @@
   "products": [
     {
       "name": "Mouse",
-      "price": "450000",
+      "price": "450",
       "category": "digital",
       "color": "mix",
       "description": "Computer Mouse\nA computer mouse is a handheld pointing device used to interact with a computer's user interface.",
@@ -31,8 +31,8 @@
     },
     {
       "name": "Dev",
-      "price": "coding",
-      "category": "1000",
+      "price": "100",
+      "category": "code",
       "color": "green",
       "description": "iamge for your bg profilr",
       "image": "https://www.pixelstalk.net/wp-content/uploads/2016/10/Image-of-Binary-Code-1.jpg",
@@ -49,7 +49,7 @@
     },
     {
       "name": "Apple",
-      "price": "90000",
+      "price": "900",
       "category": "Mobile",
       "color": "Pink",
       "description": "this is very good and funcanility mobile",
@@ -58,7 +58,7 @@
     },
     {
       "name": "Nokia",
-      "price": "10000",
+      "price": "100",
       "category": "Mobile",
       "color": "Blue",
       "description": "Nokia Phone is comming soon for sell....",
@@ -67,7 +67,7 @@
     },
     {
       "name": "Nokia",
-      "price": "99999",
+      "price": "1000",
       "category": "Mobile",
       "color": "Gold",
       "description": "iamge for your bg profilr",
@@ -76,7 +76,7 @@
     },
     {
       "name": "Laptop",
-      "price": "20000",
+      "price": "200",
       "category": "tech",
       "color": "Red",
       "description": "best selling with 64gb ",
@@ -85,7 +85,7 @@
     },
     {
       "name": "Laptop",
-      "price": "29999",
+      "price": "299",
       "category": "tech",
       "color": "Yellow",
       "description": "Laptop in best ",
@@ -96,20 +96,20 @@
   "users": [
     {
       "name": "root123",
-      "email": "root123@gmail.com",
-      "passwrod": "admin",
+      "email": "root@gmail.com",
+      "password": "root",
       "id": 1
     },
     {
       "name": "Anurag",
-      "email": "anurag",
-      "passwrod": "",
+      "email": "admin@gmail",
+      "password": "admin",
       "id": 2
     },
     {
       "name": "Anurag",
-      "email": "anurag.g@cnergee.com",
-      "passwrod": "anurag",
+      "email": "anurag@gmail.com",
+      "password": "anurag",
       "id": 3
     },
     {
@@ -120,8 +120,8 @@
     },
     {
       "name": "sdfasf",
-      "email": "sdfsdfasdfd",
-      "password": "fdsfasfsd",
+      "email": "xyz@gmail.com",
+      "password": "xyz",
       "id": 5
     },
     {
@@ -129,6 +129,152 @@
       "email": "app@gmail.com",
       "password": "app",
       "id": 6
+    }
+  ],
+  "cart": [
+    {
+      "name": "Nokia",
+      "price": "10000",
+      "category": "Mobile",
+      "color": "Blue",
+      "description": "Nokia Phone is comming soon for sell....",
+      "image": "https://th.bing.com/th/id/OIP.71-cthLtCxIzZKDym6xQfwHaHa?w=184&h=184&c=7&r=0&o=5&pid=1.7",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 9,
+      "id": 1
+    },
+    {
+      "name": "Nokia",
+      "price": "10000",
+      "category": "Mobile",
+      "color": "Blue",
+      "description": "Nokia Phone is comming soon for sell....",
+      "image": "https://th.bing.com/th/id/OIP.71-cthLtCxIzZKDym6xQfwHaHa?w=184&h=184&c=7&r=0&o=5&pid=1.7",
+      "quantity": 1,
+      "productId": 9,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "name": "Nokia",
+      "price": "99999",
+      "category": "Mobile",
+      "color": "Gold",
+      "description": "iamge for your bg profilr",
+      "image": "https://th.bing.com/th/id/OIP.AFs3sltHZ81Y90_O14_SWwAAAA?w=184&h=287&c=7&r=0&o=5&pid=1.7",
+      "quantity": 1,
+      "productId": 10,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "name": "application",
+      "price": "100",
+      "category": "sfaf",
+      "color": "black",
+      "description": "sdfgfgdfg",
+      "image": "https://picsum.photos/id/124/900/500",
+      "quantity": 4,
+      "productId": 7,
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "name": "Nokia",
+      "price": "10000",
+      "category": "Mobile",
+      "color": "Blue",
+      "description": "Nokia Phone is comming soon for sell....",
+      "image": "https://th.bing.com/th/id/OIP.71-cthLtCxIzZKDym6xQfwHaHa?w=184&h=184&c=7&r=0&o=5&pid=1.7",
+      "quantity": 1,
+      "productId": 9,
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "name": "application",
+      "price": "100",
+      "category": "sfaf",
+      "color": "black",
+      "description": "sdfgfgdfg",
+      "image": "https://picsum.photos/id/124/900/500",
+      "quantity": 4,
+      "productId": 7,
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "name": "Nokia",
+      "price": "99999",
+      "category": "Mobile",
+      "color": "Gold",
+      "description": "iamge for your bg profilr",
+      "image": "https://th.bing.com/th/id/OIP.AFs3sltHZ81Y90_O14_SWwAAAA?w=184&h=287&c=7&r=0&o=5&pid=1.7",
+      "quantity": 1,
+      "productId": 10,
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "name": "application",
+      "price": "100",
+      "category": "sfaf",
+      "color": "black",
+      "description": "sdfgfgdfg",
+      "image": "https://picsum.photos/id/124/900/500",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 7,
+      "id": 9
+    },
+    {
+      "name": "Nokia",
+      "price": "99999",
+      "category": "Mobile",
+      "color": "Gold",
+      "description": "iamge for your bg profilr",
+      "image": "https://th.bing.com/th/id/OIP.AFs3sltHZ81Y90_O14_SWwAAAA?w=184&h=287&c=7&r=0&o=5&pid=1.7",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 10,
+      "id": 10
+    },
+    {
+      "name": "Nokia",
+      "price": "10000",
+      "category": "Mobile",
+      "color": "Blue",
+      "description": "Nokia Phone is comming soon for sell....",
+      "image": "https://th.bing.com/th/id/OIP.71-cthLtCxIzZKDym6xQfwHaHa?w=184&h=184&c=7&r=0&o=5&pid=1.7",
+      "quantity": 1,
+      "productId": 9,
+      "userId": 5,
+      "id": 15
+    },
+    {
+      "name": "Laptop",
+      "price": "20000",
+      "category": "tech",
+      "color": "Red",
+      "description": "best selling with 64gb ",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6398/6398415cv1d.jpg",
+      "quantity": 1,
+      "userId": 5,
+      "productId": 11,
+      "id": 16
+    },
+    {
+      "name": "Apple",
+      "price": "90000",
+      "category": "Mobile",
+      "color": "Pink",
+      "description": "this is very good and funcanility mobile",
+      "image": "data:image/jpeg;base64,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",
+      "quantity": 1,
+      "userId": 3,
+      "productId": 8,
+      "id": 32
     }
   ]
 }

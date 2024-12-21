@@ -18,45 +18,39 @@ export class HeaderComponent implements OnInit {
   searchResult: undefined | Product[];
   cartItems = 0;
 
-  constructor(private router: Router, private product: ProductService) { }
+  constructor(private router: Router, private product: ProductService) {}
 
   ngOnInit(): void {
-    this.router.events.subscribe((val: any) => {
-      if (val.url) {
-        if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
-          if (
-            typeof localStorage !== 'undefined' &&
-            localStorage.getItem('seller') &&
-            val.url.includes('seller')
-          ) {
+    if (typeof window !== 'undefined') {
+      this.router.events.subscribe((val: any) => {
+        if (val.url) {
+          if (localStorage.getItem('seller') && val.url.includes('seller')) {
+            let sellerStore = localStorage.getItem('seller');
+            let sellerData = sellerStore && JSON.parse(sellerStore)[0];
+            this.sallerName = sellerData.name;
             this.menuType = 'seller';
-            if (localStorage.getItem('seller')) {
-              let sellerStore = localStorage.getItem('seller')
-              let sellerData = sellerStore && JSON.parse(sellerStore)[0]
-              this.sallerName = sellerData.name
-            }
-          } else if (localStorage.getItem('user')) {
-            let userStore = localStorage.getItem('user')
-            let userData = userStore && JSON.parse(userStore)
-            this.userName = userData.name
-            this.menuType = 'user';
           }
-          else {
+          else if (localStorage.getItem('user')) {
+            let userStore = localStorage.getItem('user');
+            let userData = userStore && JSON.parse(userStore);
+            this.userName = userData.name;
+            this.menuType = 'user';
+            this.product.getCartList(userData.id)
+          } else {
             this.menuType = 'default';
           }
         }
+      });
+
+      let cartData = localStorage.getItem('localCart');
+      if (cartData) {
+        this.cartItems = JSON.parse(cartData).length;
       }
-    })
-
-    let cartData = localStorage.getItem('localCart')
-    if (cartData) {
-      this.cartItems = JSON.parse(cartData).length
+      this.product.cartData.subscribe((items) => {
+        this.cartItems = items.length;
+      });
     }
-    this.product.cartData.subscribe((items)=>{
-      this.cartItems = items.length
-    })
   }
-
 
   sellerlogout() {
     localStorage.removeItem('seller');
@@ -64,8 +58,9 @@ export class HeaderComponent implements OnInit {
   }
 
   userLogout() {
-    localStorage.removeItem('user')
-    this.router.navigateByUrl('/user-auth')
+    localStorage.removeItem('user');
+    this.router.navigateByUrl('/user-auth');
+    this.product.cartData.emit([]);
   }
 
   searchProduct(query: KeyboardEvent) {
@@ -74,10 +69,10 @@ export class HeaderComponent implements OnInit {
       this.product.searchProducts(element.value).subscribe((result) => {
         // console.log(this.product);
         if (result.length > 5) {
-          result.length = 5
+          result.length = length;
         }
         this.searchResult = result;
-      })
+      });
     }
   }
 
@@ -90,7 +85,7 @@ export class HeaderComponent implements OnInit {
   }
 
   submitSearch(val: string) {
-    // console.log(val);
-    this.router.navigateByUrl(`search/${val}`)
+    console.log(val);
+    this.router.navigateByUrl(`search/${val}`);
   }
 }

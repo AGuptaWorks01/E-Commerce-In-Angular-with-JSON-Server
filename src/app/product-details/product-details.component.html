@@ -15,7 +15,7 @@
       <h6>Category: {{ productData.category }}</h6>
       <h6>Description: {{ productData.description }}</h6>
       <button class="form-button">Buy Now</button>
-      <button *ngIf="!removeCart" class="form-button" (click)="AddToCart()">
+      <button *ngIf="!removeCart" class="form-button" (click)="addToCart()">
         Add to Cart
       </button>
       <button
