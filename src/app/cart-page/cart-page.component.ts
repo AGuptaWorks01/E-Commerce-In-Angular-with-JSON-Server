@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { cart, priceSummary } from '../data-type';
 import { CommonModule } from '@angular/common';
-import { warn } from 'console';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-cart-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './cart-page.component.html',
   styleUrl: './cart-page.component.css',
 })
@@ -20,26 +20,44 @@ export class CartPageComponent {
     delivery: 0,
     total: 0,
   };
-  constructor(private product: ProductService) {}
+  constructor(private product: ProductService, private router: Router) {}
 
   ngOnInit(): void {
-    if (typeof window !== 'undefined') {
+    this.loadDetails()
+  }
+
+  checkout() {
+    this.router.navigateByUrl('checkout');
+  }
+
+  loadDetails() {
+    // if (typeof window !== 'undefined') {
       this.product.currentCart().subscribe((result) => {
         this.cartData = result;
         let price = 0;
         result.forEach((item) => {
-          if(item.quantity){
+          if (item.quantity) {
             price = price + +item.price;
           }
         });
-        console.log(price);
-        this.priceSummary.price=price
-        this.priceSummary.discount = price/10
-        this.priceSummary.tax = price/10
-        this.priceSummary.delivery = 100
-        this.priceSummary.total=price+(price/10)+100-(price/10)
-        console.warn(this.priceSummary)
+
+        this.priceSummary.price = price;
+        this.priceSummary.discount = price / 10;
+        this.priceSummary.tax = price / 10;
+        this.priceSummary.delivery = 100;
+        this.priceSummary.total = price + price / 10 + 100 - price / 10;
+        if(!this.cartData.length){
+          this.router.navigateByUrl('/')
+        }
       });
-    }
+    // }
+  }
+
+  removeToCart(cartId: number | undefined) {
+    cartId &&
+      this.cartData &&
+      this.product.removeToCart(cartId).subscribe((result) => {
+        this.loadDetails()
+      });
   }
 }

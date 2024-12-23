@@ -107,6 +107,7 @@ export class ProductDetailsComponent implements OnInit {
       let user = localStorage.getItem('user');
       let userId = user && JSON.parse(user).id;
       console.warn(this.cartData);
+      
       this.cartData &&
       this.product.removeToCart(this.cartData.id).subscribe((result) => {
         if (result) {
