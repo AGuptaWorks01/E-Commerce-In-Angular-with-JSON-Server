@@ -15,7 +15,7 @@ export class SellerService {
     private http: HttpClient,
     private router: Router,
     @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
+  ) { }
 
   userSignUp(data: SignUp) {
     this.http

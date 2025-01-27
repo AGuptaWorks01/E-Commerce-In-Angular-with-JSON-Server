@@ -38,6 +38,9 @@
     display: flex;
     flex-direction: column;
 }
+.comman-form  a{
+    cursor: pointer;
+}
 
 .form-input {
     margin-bottom: 15px;

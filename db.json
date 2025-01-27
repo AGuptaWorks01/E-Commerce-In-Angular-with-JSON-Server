@@ -129,117 +129,21 @@
       "email": "app@gmail.com",
       "password": "app",
       "id": 6
-    }
-  ],
-  "cart": [
-    {
-      "name": "Nokia",
-      "price": "10000",
-      "category": "Mobile",
-      "color": "Blue",
-      "description": "Nokia Phone is comming soon for sell....",
-      "image": "https://th.bing.com/th/id/OIP.71-cthLtCxIzZKDym6xQfwHaHa?w=184&h=184&c=7&r=0&o=5&pid=1.7",
-      "quantity": 1,
-      "userId": 1,
-      "productId": 9,
-      "id": 1
     },
     {
-      "name": "Nokia",
-      "price": "10000",
-      "category": "Mobile",
-      "color": "Blue",
-      "description": "Nokia Phone is comming soon for sell....",
-      "image": "https://th.bing.com/th/id/OIP.71-cthLtCxIzZKDym6xQfwHaHa?w=184&h=184&c=7&r=0&o=5&pid=1.7",
-      "quantity": 1,
-      "productId": 9,
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "name": "Nokia",
-      "price": "99999",
-      "category": "Mobile",
-      "color": "Gold",
-      "description": "iamge for your bg profilr",
-      "image": "https://th.bing.com/th/id/OIP.AFs3sltHZ81Y90_O14_SWwAAAA?w=184&h=287&c=7&r=0&o=5&pid=1.7",
-      "quantity": 1,
-      "productId": 10,
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "name": "application",
-      "price": "100",
-      "category": "sfaf",
-      "color": "black",
-      "description": "sdfgfgdfg",
-      "image": "https://picsum.photos/id/124/900/500",
-      "quantity": 4,
-      "productId": 7,
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "name": "Nokia",
-      "price": "10000",
-      "category": "Mobile",
-      "color": "Blue",
-      "description": "Nokia Phone is comming soon for sell....",
-      "image": "https://th.bing.com/th/id/OIP.71-cthLtCxIzZKDym6xQfwHaHa?w=184&h=184&c=7&r=0&o=5&pid=1.7",
-      "quantity": 1,
-      "productId": 9,
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "name": "application",
-      "price": "100",
-      "category": "sfaf",
-      "color": "black",
-      "description": "sdfgfgdfg",
-      "image": "https://picsum.photos/id/124/900/500",
-      "quantity": 4,
-      "productId": 7,
-      "userId": 1,
+      "name": "",
+      "email": "",
+      "password": "",
       "id": 7
     },
     {
-      "name": "Nokia",
-      "price": "99999",
-      "category": "Mobile",
-      "color": "Gold",
-      "description": "iamge for your bg profilr",
-      "image": "https://th.bing.com/th/id/OIP.AFs3sltHZ81Y90_O14_SWwAAAA?w=184&h=287&c=7&r=0&o=5&pid=1.7",
-      "quantity": 1,
-      "productId": 10,
-      "userId": 1,
+      "name": "",
+      "email": "",
+      "password": "",
       "id": 8
-    },
-    {
-      "name": "application",
-      "price": "100",
-      "category": "sfaf",
-      "color": "black",
-      "description": "sdfgfgdfg",
-      "image": "https://picsum.photos/id/124/900/500",
-      "quantity": 1,
-      "userId": 1,
-      "productId": 7,
-      "id": 9
-    },
-    {
-      "name": "Nokia",
-      "price": "99999",
-      "category": "Mobile",
-      "color": "Gold",
-      "description": "iamge for your bg profilr",
-      "image": "https://th.bing.com/th/id/OIP.AFs3sltHZ81Y90_O14_SWwAAAA?w=184&h=287&c=7&r=0&o=5&pid=1.7",
-      "quantity": 1,
-      "userId": 1,
-      "productId": 10,
-      "id": 10
-    },
+    }
+  ],
+  "cart": [
     {
       "name": "Apple",
       "price": "90000",
@@ -382,6 +286,13 @@
       "totalPrice": 1100,
       "userId": 5,
       "id": 8
+    },
+    {
+      "email": "werqw",
+      "number": "qwrqw",
+      "totalPrice": 330997,
+      "userId": 1,
+      "id": 9
     }
   ]
 }

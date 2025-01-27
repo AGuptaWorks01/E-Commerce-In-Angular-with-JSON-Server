@@ -3,27 +3,14 @@ font-family: sans-serif;
 background-color: rgb(230, 226, 226);
 }
 
-.form-button{
-  height: 35px;
-  border: 1px solid #0648a0;
-  color: rgb(1, 86, 112);
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+ 
+a{
   cursor: pointer;
-  background-color: rgb(206, 222, 230);
 }
-
-
-.max-width{
-width: 100%;
-}
-
-
-
-
-
-
-
-
-
-
-
-

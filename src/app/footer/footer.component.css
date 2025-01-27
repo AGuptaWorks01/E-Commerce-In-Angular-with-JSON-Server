@@ -1,0 +1,32 @@
+/* Footer Container Styles */
+.footer {
+  width: 100%;
+  background-color: #929fba;
+  color: white;
+  padding: 10px 0; /* Reduce top and bottom padding */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Social Media Buttons */
+.footer .btn-floating {
+  border-radius: 50%;
+  padding: 6px; /* Reduce button size */
+  font-size: 12px; /* Smaller icons */
+  margin: 5px; /* Space between buttons */
+}
+
+/* Text in the footer */
+.footer .text-center {
+  font-size: 14px; /* Smaller font size */
+  line-height: 1.5; /* Compact spacing between lines */
+}
+
+/* Anchor Link Styles */
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

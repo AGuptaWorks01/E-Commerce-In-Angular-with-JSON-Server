@@ -17,6 +17,8 @@ export class HeaderComponent implements OnInit {
   userName: string = '';
   searchResult: undefined | Product[];
   cartItems = 0;
+  menuOpen = false;
+  
 
   constructor(private router: Router, private product: ProductService) {}
 
@@ -85,7 +87,18 @@ export class HeaderComponent implements OnInit {
   }
 
   submitSearch(val: string) {
-    console.log(val);
+    // console.log(val);
     this.router.navigateByUrl(`search/${val}`);
+  }
+
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen
+    const navMenu = document.querySelector('.nav-menu')
+    if (this.menuOpen) {
+      navMenu?.classList.add('open')
+    } else {
+      navMenu?.classList.remove('open')
+    }
   }
 }
