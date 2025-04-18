@@ -20,7 +20,7 @@ export class CartPageComponent {
     delivery: 0,
     total: 0,
   };
-  constructor(private product: ProductService, private router: Router) {}
+  constructor(private product: ProductService, private router: Router) { }
 
   ngOnInit(): void {
     this.loadDetails()
@@ -31,26 +31,25 @@ export class CartPageComponent {
   }
 
   loadDetails() {
-    // if (typeof window !== 'undefined') {
-      this.product.currentCart().subscribe((result) => {
-        this.cartData = result;
-        let price = 0;
-        result.forEach((item) => {
-          if (item.quantity) {
-            price = price + +item.price;
-          }
-        });
-
-        this.priceSummary.price = price;
-        this.priceSummary.discount = price / 10;
-        this.priceSummary.tax = price / 10;
-        this.priceSummary.delivery = 100;
-        this.priceSummary.total = price + price / 10 + 100 - price / 10;
-        if(!this.cartData.length){
-          this.router.navigateByUrl('/')
+    this.product.currentCart().subscribe((result) => {
+      this.cartData = result;
+      let price = 0;
+      result.forEach((item) => {
+        if (item.quantity !== undefined && item.price !== undefined) {
+          price += (item.price ?? 0) * (item.quantity ?? 1);
         }
       });
-    // }
+
+      this.priceSummary.price = price;
+      this.priceSummary.discount = price / 10;
+      this.priceSummary.tax = price / 10;
+      this.priceSummary.delivery = 100;
+      this.priceSummary.total = price + price / 10 + 100 - price / 10;
+
+      if (!this.cartData.length) {
+        this.router.navigateByUrl('/')
+      }
+    });
   }
 
   removeToCart(cartId: number | undefined) {

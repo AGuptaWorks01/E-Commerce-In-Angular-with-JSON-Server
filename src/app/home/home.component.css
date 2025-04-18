@@ -66,16 +66,6 @@ ngb-carousel {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 /* Container for the product list */
 .product-list-wrapper {
   padding: 30px 15px;
@@ -167,6 +157,10 @@ ngb-carousel {
 @media (max-width: 767px) {
   .product-item {
     max-width: 100%; /* Make product items take full width on smaller screens */
+  }
+
+  .product-item img {
+    height: 180px; /* Adjust image height for smaller screens */
   }
 }
 

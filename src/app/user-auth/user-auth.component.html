@@ -37,11 +37,7 @@
         #password="ngModel"
       />
 
-      <button
-        type="submit"
-        class="form-button"
-        [disabled]="userSignUp.invalid"
-      >
+      <button type="submit" class="form-button" [disabled]="userSignUp.invalid">
         Sign-Up
       </button>
       <p class="form-footer">
@@ -87,11 +83,7 @@
         Password must be 2-20 characters long.
       </p>
 
-      <button
-        class="form-button"
-        [disabled]="userLogin.invalid"
-        type="submit"
-      >
+      <button class="form-button" [disabled]="userLogin.invalid" type="submit">
         Login
       </button>
       <p class="form-footer">

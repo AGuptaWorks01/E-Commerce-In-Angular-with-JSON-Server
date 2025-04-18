@@ -13,21 +13,24 @@ import { CommonModule } from '@angular/common';
 export class MyOrdersComponent implements OnInit {
   orderData: order[] | undefined;
 
-  constructor(private product: ProductService) {}
+  constructor(private product: ProductService) { }
 
   ngOnInit(): void {
     this.getOrderList()
-  }
-
-  cancelOrder(orderId: number | undefined) {
-    orderId && this.product.cancelOrder(orderId).subscribe((result) => {
-      this.getOrderList()
-    });
   }
 
   getOrderList() {
     this.product.orderList().subscribe((result) => {
       this.orderData = result;
     });
+  }
+
+  cancelOrder(orderId: number | undefined) {
+    if (orderId && window.confirm("Are you sure you want to cancel this order?")) {
+
+      orderId && this.product.cancelOrder(orderId).subscribe((result) => {
+        this.getOrderList()
+      });
+    }
   }
 }

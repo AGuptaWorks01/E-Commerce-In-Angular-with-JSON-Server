@@ -1,5 +1,5 @@
-<div class="seller-auth">
-    <div *ngIf="showLogin" class="signup">
+<div class="seller-auth form-container">
+    <div *ngIf="showLogin" class="signup" >
         <h1>Seller Sign-Up</h1>
 
         <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)" class="comman-form">

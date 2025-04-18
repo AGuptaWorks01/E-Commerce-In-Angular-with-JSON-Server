@@ -1,62 +1,95 @@
+/* Seller Authentication Container */
 .seller-auth {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 91vh;
-    background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Take full viewport height */
+  padding: 20px;
 }
 
-.signup {
-    background-color: #fff;
-    padding: 40px; /* Increased padding */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 400px; /* Increased width */
-}
-.login {
-    background-color: #fff;
-    padding: 40px; /* Increased padding */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(17, 1, 1, 0.1);
-    text-align: center;
-    width: 400px; /* Increased width */
+/* Common form styling without background */
+.seller-auth .signup, 
+.seller-auth .login {
+  padding: 20px; /* Adjust padding for compactness */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 500px; /* Increased width */
+  text-align: center;
 }
 
-.signup h1 {
-    margin-bottom: 30px;
-    font-size: 24px;
-    color: #333;
-}
-.login h1 {
-    margin-bottom: 30px;
-    font-size: 24px;
-    color: #333;
+h1 {
+  margin-bottom: 20px; /* Reduced space for compact height */
+  font-size: 24px;
+  color: #333;
 }
 
 .comman-form {
-    display: flex;
-    flex-direction: column;
-}
-.comman-form  a{
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Anchor tag styling for links */
+.comman-form a {
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.comman-form a:hover {
+  text-decoration: underline;
+}
+
+/* Input styling */
 .form-input {
-    margin-bottom: 15px;
-    padding: 15px; /* Increased padding */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+  width: 100%;
+  margin-bottom: 12px; /* Reduced space for compact height */
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-.form-input[type="button"] {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
+/* Button styling */
+.form-input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.form-input[type="button"]:hover {
-    background-color: #0056b3;
+.form-input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.form-input:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .seller-auth {
+    height: auto; /* Allow height to adjust for smaller screens */
+  }
+
+  .seller-auth .signup, 
+  .seller-auth .login {
+    padding: 20px; /* Adjust padding for mobile screens */
+    width: 100%; /* Full width for smaller screens */
+    max-width: 400px; /* Keep it within a limit */
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .form-input {
+    font-size: 14px;
+  }
+
+  .form-input[type="submit"] {
+    font-size: 14px;
+  }
 }

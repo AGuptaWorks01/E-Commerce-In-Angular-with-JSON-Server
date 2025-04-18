@@ -1,0 +1,23 @@
+/* Fix the header at the top */
+app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it's on top of other content */
+}
+
+/* Add padding to the container so content doesn’t overlap with the header */
+.container {
+  padding-top: 80px; /* Adjust based on the height of your header */
+  padding-bottom: 50px; /* Optional: add space for the footer */
+  min-height: auto; /* Ensure the content takes full height of the screen */
+}
+
+/* Optional: Ensuring footer stays at the bottom */
+app-footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

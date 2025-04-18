@@ -10,18 +10,22 @@
           <span>{{ cart.name }}</span>
         </li>
         <li>
-          <span>{{ cart.price }}</span>
+          <span>₹{{ cart.price }} x {{ cart.quantity }}</span>
         </li>
         <li>
-          <span>{{ cart.quantity }}</span>
+          <span
+            ><b>Total: ₹{{ (cart.price)*(cart.quantity ?? 1)  }}</b></span
+          >
         </li>
-        <button class="form-btn" (click)="removeToCart(cart.id)">Remove from cart</button>
+        <button class="form-btn" (click)="removeToCart(cart.id)">
+          Remove from cart
+        </button>
       </ul>
     </div>
 
     <div class="col-sm-4 summary">
-      <h3 >Summary</h3>
-      <ul style="background-color: white;">
+      <h3>Summary</h3>
+      <ul style="background-color: white">
         <li>
           <span>Amount </span><span>{{ priceSummary.price }}</span>
         </li>

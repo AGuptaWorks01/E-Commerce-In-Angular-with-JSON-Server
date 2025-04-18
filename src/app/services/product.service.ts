@@ -7,7 +7,7 @@ import { cart, order, Product } from '../data-type';
 })
 export class ProductService {
   cartData = new EventEmitter<Product[] | []>();
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   addProduct(data: Product) {
     return this.http.post(' http://localhost:3000/products', data);
@@ -47,25 +47,29 @@ export class ProductService {
   }
 
   localAddToCart(data: Product) {
-    let cartData = [];
-    let localCart = localStorage.getItem('localCart');
-    if (!localCart) {
-      localStorage.setItem('localCart', JSON.stringify([data]));
-    } else {
-      cartData = JSON.parse(localCart);
-      cartData.push(data);
-      localStorage.setItem('localCart', JSON.stringify(cartData));
-      this.cartData.emit(cartData);
+    if (typeof localStorage !== 'undefined') {
+      let cartData = [];
+      let localCart = localStorage.getItem('localCart');
+      if (!localCart) {
+        localStorage.setItem('localCart', JSON.stringify([data]));
+      } else {
+        cartData = JSON.parse(localCart);
+        cartData.push(data);
+        localStorage.setItem('localCart', JSON.stringify(cartData));
+        this.cartData.emit(cartData);
+      }
     }
   }
 
   removeItemFormCart(productId: number) {
-    let cartData = localStorage.getItem('localCart');
-    if (cartData) {
-      let items: Product[] = JSON.parse(cartData);
-      items = items.filter((item: Product) => productId !== item.id);
-      localStorage.setItem('localCart', JSON.stringify(items));
-      this.cartData.emit(items);
+    if (typeof localStorage !== 'undefined') {
+      let cartData = localStorage.getItem('localCart');
+      if (cartData) {
+        let items: Product[] = JSON.parse(cartData);
+        items = items.filter((item: Product) => productId !== item.id);
+        localStorage.setItem('localCart', JSON.stringify(items));
+        this.cartData.emit(items);
+      }
     }
   }
 

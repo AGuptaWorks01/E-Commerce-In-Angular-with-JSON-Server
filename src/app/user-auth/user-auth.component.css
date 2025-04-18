@@ -3,8 +3,9 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 50px;
+
   padding: 0 20px; /* Add padding for smaller screens */
+  /* Removed height property */
 }
 
 /* Form container styles */
@@ -16,8 +17,8 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 50px auto;
+  /* No fixed height specified */
 }
-
 
 /* Form title */
 .form-title {
@@ -30,15 +31,6 @@
 }
 
 
-/* Form input styles */
-.form-input {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
 
 /* Invalid input feedback */
 .invalid-feedback {
