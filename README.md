@@ -1,63 +1,84 @@
-<<<<<<< HEAD
-# ECOMMPROJECT
+# E-Commerce-In-Angular-with-JSON-Server
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
+This project is an E-Commerce web application built using Angular for the frontend and JSON Server as a mock backend API. It demonstrates a typical online shopping experience with product browsing, cart management, and order features.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- User authentication (login/signup)
+- Product catalog with category filtering and search
+- Product details view
+- Add to cart and cart management
+- Order placement and order history
+- Responsive design for desktops and mobiles
+- Uses JSON Server as a mock RESTful API backend
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Prerequisites
 
-## Build
+- [Node.js](https://nodejs.org/) (v14+ recommended)
+- [Angular CLI](https://angular.io/cli)
+- [JSON Server](https://github.com/typicode/json-server)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Setup
 
-## Running unit tests
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/AGuptaWorks01/E-Commerce-In-Angular-with-JSON-Server.git
+   cd E-Commerce-In-Angular-with-JSON-Server
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-## Running end-to-end tests
+3. **Start JSON Server**
+   ```bash
+   npm run json-server
+   ```
+   This will run JSON Server on [http://localhost:3000](http://localhost:3000).
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. **Start the Angular application**
+   ```bash
+   ng serve
+   ```
+   Navigate to [http://localhost:4200](http://localhost:4200) in your browser.
 
-## Further help
+## Project Structure
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   ├── services/
+│   │   ├── models/
+│   │   ├── guards/
+│   │   └── ...
+│   ├── assets/
+│   └── environments/
+├── db.json           # JSON Server database
+├── package.json
+├── angular.json
+└── ...
+```
 
-## Run JSON server
+## Scripts
 
-json-server --watch db.json
-=======
-# E-commerce Project Overview
-This project is an e-commerce platform that allows sellers to add, manage, and list their products, while users can browse, add items to their cart, and place orders. The project utilizes JSON Server for backend functionality, simulating a database with mock data.
+- `ng serve`: Run Angular development server
+- `npm run json-server`: Start the mock backend using JSON Server
 
-Key Features:
-Seller Functionality:
+## Customization
 
-Sellers can add products to the platform with details such as name, price, description, and images.
-Sellers can manage their product listings, including the ability to update or remove products.
-Sellers have an admin page where they can manage their products and oversee the marketplace.
-User Functionality:
+- To add/edit products, users, or orders, modify `db.json`.
+- Update Angular components and services in `src/app/` as needed.
 
-Users can view available products and browse through different categories or listings.
-Users can add products to their shopping cart and review their selections.
-Users can remove products from the cart if needed.
-The system also includes a logout functionality to securely end user sessions.
-Order Page:
+## Acknowledgements
 
-Once the user is ready, they can view an order page where they can proceed to finalize their purchase.
-The order page displays the cart contents and the total amount for checkout.
-JSON Server API:
+- [Angular](https://angular.io/)
+- [JSON Server](https://github.com/typicode/json-server)
+- [Bootstrap](https://getbootstrap.com/) (if used for styling)
 
-The application leverages JSON Server to simulate a RESTful backend, enabling CRUD operations for products, users, and orders.
-All data (such as product details, user cart, and orders) is handled through JSON-based API calls.
-Tech Stack:
-Frontend: [HTML/CSS, JavaScript, React or another framework/library used for UI]
-Backend: JSON Server (Mock Database)
-Authentication: Session management for user login/logout
-Database: JSON file (simulated using JSON Server)
-This project aims to provide a simple yet functional prototype of an e-commerce platform with basic features such as product management, user interaction, and order processing.
->>>>>>> bba62f5d8c32248aa5c4fd89311c23c951a6cd46
+## License
+
+This project is licensed under the MIT License.
